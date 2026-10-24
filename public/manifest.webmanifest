@@ -1,0 +1,24 @@
+{
+  "name": "Shira Coach — ניהול ומעקב אימונים",
+  "short_name": "Shira Coach",
+  "description": "תכנון אימונים, תיעוד בזמן אמת, התקדמות והמלצות — עובד גם בלי חיבור",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F4F3EF",
+  "theme_color": "#4433D6",
+  "categories": ["health", "fitness", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "התחלת אימון", "url": "./#/workout", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "גיבוי", "url": "./#/backup", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
