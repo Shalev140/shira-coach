@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import { db } from '../db/db';
 import { blankClient, initDatabase, saveClient } from '../db/repo';
 import { entry, session, set } from '../domain/testkit';
+import { isoDate } from '../domain/util';
 import { correctSet, saveWrapRating } from './SessionSummary';
 
 async function reset() {
@@ -52,7 +53,8 @@ describe('rating a finished workout in the summary', () => {
   it('three workouts in a row rated 9–10 raise the fatigue check without a manual re-check', async () => {
     const c = { ...blankClient(), name: 'נועה' };
     await saveClient(c);
-    const days = ['2026-10-19', '2026-10-21', '2026-10-23'];
+    // recent days: the rule ignores workouts older than two weeks, so fixed dates would go stale
+    const days = [5, 3, 1].map((n) => isoDate(new Date(Date.now() - n * 86_400_000)));
     const sessions = days.map((d) => session(d, [entry('bench_press_db', [set(20, 10), set(20, 10)])], { clientId: c.id }));
     await db.sessions.bulkPut(sessions);
     // each workout is finished first (engine already ran) and only then rated in the summary

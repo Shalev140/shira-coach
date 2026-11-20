@@ -294,6 +294,8 @@ export function SettingsPage() {
           Shira Coach · גרסה {typeof __APP_VERSION__ === 'string' ? __APP_VERSION__ : ''} · נבנתה {typeof __BUILD_TIME__ === 'string' ? isoDate(new Date(__BUILD_TIME__)) : ''}
           <br />
           כל הנתונים נשמרים במכשיר הזה בלבד ואינם נשלחים לשום שרת.
+          <br />
+          נשלח רק מונה כניסות אנונימי, בלי שום מידע על מתאמנים או אימונים.
         </div>
       </div>
     </>

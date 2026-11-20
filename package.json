@@ -1,7 +1,7 @@
 {
   "name": "shira-coach",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "מערכת לניהול ומעקב אימונים אישיים — PWA בעברית, עובדת גם בלי חיבור",
   "scripts": {
